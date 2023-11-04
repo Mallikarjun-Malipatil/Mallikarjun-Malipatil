@@ -6,7 +6,11 @@ pipeline {
 		{
         steps
         {
-            sh 'sleep 5'
+          sh  '''
+			#!/bin/bash
+			ls-lrt
+			pwd
+			'''
         }
         }
         stage('TEST')
@@ -24,4 +28,3 @@ pipeline {
         }
         }
 		}
-}
